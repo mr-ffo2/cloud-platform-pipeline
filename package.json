@@ -6,7 +6,9 @@
     "scripts": {
         "build": "tsc --noEmit",
         "format": "prettier . --write",
-        "format:check": "prettier . --check"
+        "format:check": "prettier . --check",
+        "lint": "eslint .",
+        "check": "npm run build && npm run lint && npm run format:check"
     },
     "dependencies": {
         "@pulumi/aws": "^7.0.0",

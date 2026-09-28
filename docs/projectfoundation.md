@@ -12,12 +12,12 @@ While this provisions cloud resources, it does not reflect how Infrastructure as
 
 Real production environments require much more than simply deploying infrastructure. They require:
 
-* Clean project architecture
-* Automated quality checks
-* Consistent code formatting
-* Modular infrastructure design
-* Continuous Integration (CI)
-* Security-first engineering practices
+- Clean project architecture
+- Automated quality checks
+- Consistent code formatting
+- Modular infrastructure design
+- Continuous Integration (CI)
+- Security-first engineering practices
 
 The goal of this project is to build a **production-grade cloud platform** using **Pulumi**, **AWS**, and **GitHub Actions**, while following engineering practices commonly found in mature DevOps and Platform Engineering teams.
 
@@ -33,15 +33,15 @@ Instead, it aims to demonstrate how modern infrastructure projects should be str
 
 By the end of the project, the platform will include:
 
-* Modular Infrastructure as Code
-* CI/CD pipelines
-* Security scanning
-* Infrastructure validation
-* Monitoring
-* Deployment approvals
-* Cost protection
-* Drift detection
-* Cloud monitoring and alerting
+- Modular Infrastructure as Code
+- CI/CD pipelines
+- Security scanning
+- Infrastructure validation
+- Monitoring
+- Deployment approvals
+- Cost protection
+- Drift detection
+- Cloud monitoring and alerting
 
 ---
 
@@ -53,21 +53,21 @@ Pulumi approaches the problem differently.
 
 Instead of learning another configuration language, infrastructure is written using familiar programming languages such as:
 
-* TypeScript
-* Python
-* Go
-* C#
-* Java
+- TypeScript
+- Python
+- Go
+- C#
+- Java
 
 This provides several advantages:
 
-* Code reuse
-* Functions
-* Loops
-* Strong typing
-* IDE support
-* Testing
-* Modular architecture
+- Code reuse
+- Functions
+- Loops
+- Strong typing
+- IDE support
+- Testing
+- Modular architecture
 
 Infrastructure becomes software rather than configuration.
 
@@ -94,10 +94,10 @@ Each module has one responsibility.
 
 For example:
 
-* Storage owns S3 resources.
-* Security owns IAM policies and security services.
-* Monitoring owns CloudWatch resources.
-* Networking owns CloudFront and networking components.
+- Storage owns S3 resources.
+- Security owns IAM policies and security services.
+- Monitoring owns CloudWatch resources.
+- Networking owns CloudFront and networking components.
 
 This follows the **Single Responsibility Principle (SRP)** and keeps the infrastructure maintainable as the platform grows.
 
@@ -149,11 +149,11 @@ This module now owns storage responsibilities and exposes only what other module
 
 Future additions will include:
 
-* Versioning
-* Encryption
-* Lifecycle policies
-* Backup configuration
-* Replication
+- Versioning
+- Encryption
+- Lifecycle policies
+- Backup configuration
+- Replication
 
 ---
 
@@ -162,7 +162,7 @@ Future additions will include:
 One seemingly small configuration has an important impact.
 
 ```ts
-forceDestroy: false
+forceDestroy: false;
 ```
 
 If the bucket contains objects, Pulumi refuses to delete it.
@@ -213,9 +213,9 @@ A GitHub Actions workflow was introduced to automate quality checks whenever cod
 
 Current validation includes:
 
-* Dependency installation
-* TypeScript compilation
-* npm security audit
+- Dependency installation
+- TypeScript compilation
+- npm security audit
 
 As the project evolves, additional stages will be introduced.
 
@@ -251,8 +251,8 @@ To eliminate unnecessary formatting discussions, Prettier was introduced.
 
 Configuration was standardized through:
 
-* `prettier.config.mjs`
-* `.prettierignore`
+- `prettier.config.mjs`
+- `.prettierignore`
 
 New project scripts were also added.
 
@@ -298,15 +298,15 @@ This foundation prepares the project for more advanced platform engineering capa
 
 Future phases will introduce:
 
-* Secret scanning with Gitleaks
-* Infrastructure security scanning using Checkov
-* Pulumi Preview inside GitHub Actions
-* Manual deployment approvals
-* CloudWatch monitoring
-* SNS notifications
-* AWS Budgets
-* Drift detection
-* AI-assisted operations
+- Secret scanning with Gitleaks
+- Infrastructure security scanning using Checkov
+- Pulumi Preview inside GitHub Actions
+- Manual deployment approvals
+- CloudWatch monitoring
+- SNS notifications
+- AWS Budgets
+- Drift detection
+- AI-assisted operations
 
 The goal is to move beyond simply deploying infrastructure and instead build a complete production-ready cloud platform.
 
